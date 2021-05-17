@@ -10,5 +10,8 @@
     "weather"
   ],
   "author": "Arseneich",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.88.2"
+  }
 }
