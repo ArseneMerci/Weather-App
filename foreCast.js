@@ -1,21 +1,21 @@
 const request = require('request')
 
 const foreCast = (latitude,longitude,callback)=>{
-    const weatherUrl = `http://api.weatherstack.com/current?access_key=5a9a04d7ff075a6df8376fbe66a70c34&query=${latitude},${longitude}`
+    const url = `http://api.weatherstack.com/current?access_key=5a9a04d7ff075a6df8376fbe66a70c34&query=${latitude},${longitude}`
 
-    request({url: weatherUrl, json: true}, (err,response)=>{
+    request({url, json: true}, (err,{body})=>{
         if(err){
             callback('can not connect to Weather Server', undefined)
         }
-        else if(response.body.error){
-            callback(response.body.error.info, undefined)
+        else if(body.error){
+            callback(body.error.info, undefined)
         }
         else{
-            const path = response.body.current
+            const {current} = body
             callback(undefined,{
-                descr:path.weather_descriptions,
-                temp:path.temperature,
-                feelsLike:path.feelslike})
+                descr:current.weather_descriptions,
+                temp:current.temperature,
+                feelsLike:current.feelslike})
         }
     })
 }
