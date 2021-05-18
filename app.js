@@ -6,11 +6,11 @@ const location = require('./location')
 if(!location){
     console.log(chalk.yellow.inverse('Please provide your location!'))
 }else{
-geoCode(location,(err,data)=>{
+geoCode(location,(err,{placeName,latitude,longitude})=>{
     if(err)return console.log(chalk.red.inverse(err))
-    foreCast(data.latitude,data.longitude,(err,forecastData)=>{
+    foreCast(latitude,longitude,(err,{descr,temp,feelsLike})=>{
         if(err) return console.log(chalk.red.inverse(response.body.error.info))
-        console.log(data.placeName)
-        console.log(chalk.green.inverse(`${forecastData.descr}! `) + `It is currently ${forecastData.temp} degrees out, but it feels like ${forecastData.feelsLike} degrees in.`)
+        console.log(placeName)
+        console.log(chalk.green.inverse(`${descr}! `) + `It is currently ${temp} degrees out, but it feels like ${feelsLike} degrees in.`)
     })
 })}
