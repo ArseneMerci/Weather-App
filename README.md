@@ -1,15 +1,28 @@
 # Weather App
-## This is an app that displays weather condition in different places
+## This is an app that displays weather condition in different places(Web server version)
 
-### Using Command Terminal
+### Using web server
+### Installing Dependencies
+
+Run
+`npm install` or `npm i`
+
+End Point
 
 ```
-$ node app.js muhanga rwanda
-Muhanga, Southern, Rwanda
-Partly cloudy! It is currently 23 degrees out, but it feels like 25 degrees in.
+/api/v1/admin/login
 ```
-```
-$ node app.js new york
-New York, New York, United States
-Sunny! It is currently 16 degrees out, but it feels like 16 degrees in.
+Response
+```json
+{
+"forecast": {
+    "descr": [
+        "Light rain shower"
+            ],
+    "temp": 14,
+    "feelsLike": 14
+            },
+"location": "Muhanga, Southern, Rwanda",
+"address": "gitarama"
+}
 ```
