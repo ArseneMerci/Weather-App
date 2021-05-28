@@ -10,7 +10,7 @@ Run
 End Point
 
 ```
-/api/v1/admin/login
+/weather?address=gitarama
 ```
 Response
 ```json
