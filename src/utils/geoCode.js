@@ -13,11 +13,11 @@ const geoCode = (location, callback)=>{
             callback('Location Not Found')
         }
         else{
-            const placeName = body.features[0].place_name
+            const location = body.features[0].place_name
             const latitude = body.features[0].center[1]
             const longitude = body.features[0].center[0]
             callback(undefined,{
-                latitude,placeName,longitude
+                latitude,location,longitude
             })
         }
     })
