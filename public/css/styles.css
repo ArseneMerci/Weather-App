@@ -9,6 +9,14 @@ body {
     flex-direction: column;
     min-height: 100vh
 }
+p{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+span{
+    color:green;
+    font-weight: 900;
+}
 
 .main-content {
     flex-grow: 1;
@@ -27,7 +35,7 @@ header {
 }
 
 h1 {
-    font-size: 64px;
+    font-size: 25px;
     margin-bottom: 16px;
 }
 
@@ -38,5 +46,19 @@ header a {
 }
 
 .portrait {
-    width: 250px;
+    width: 200px;
+    height: 180px
+}
+
+input {
+    border: 1px solid #cccccc;
+    padding: 8px;
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid #888888;
+    background: #888888;
+    color: white;
+    padding: 8px;
 }
