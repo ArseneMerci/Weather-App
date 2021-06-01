@@ -16,7 +16,7 @@ weatherForm.addEventListener('submit',(e)=>{
            return message1.textContent = data.error
         }
         message1.textContent = `Location : ${data.location}`
-        message2.textContent = `The Weather is ${data.forecast.descr} with ${data.forecast.temp} degrees and outside feels like ${data.forecast.feelsLike} degrees`
+        message2.textContent = `The Weather is ${data.forecast.descr} with ${data.forecast.temp} degrees and outside feels like ${data.forecast.feelsLike} degrees, it is ${data.forecast.isDay}`
     })
 })
 })

@@ -7,22 +7,13 @@
 Run
 `npm install` or `npm i`
 
+### Starrting The Server
+
+Run
+`npm run dev`
+
 End Point
 
 ```
-/weather?address=gitarama
-```
-Response
-```json
-{
-"forecast": {
-    "descr": [
-        "Light rain shower"
-            ],
-    "temp": 14,
-    "feelsLike": 14
-            },
-"location": "Muhanga, Southern, Rwanda",
-"address": "gitarama"
-}
+http://localhost:3000/
 ```

@@ -12,10 +12,15 @@ const foreCast = (latitude,longitude,callback)=>{
         }
         else{
             const {current} = body
+            if(current.is_day){
+                current.is_day = 'day'
+            }else current.is_day = 'night'
             callback(undefined,{
                 descr:current.weather_descriptions,
                 temp:current.temperature,
-                feelsLike:current.feelslike})
+                feelsLike:current.feelslike,
+                isDay:current.is_day
+            })
         }
     })
 }
