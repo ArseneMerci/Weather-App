@@ -16,7 +16,7 @@ weatherForm.addEventListener('submit',(e)=>{
         if(data.error) {
            return message1.textContent = data.error
         }
-        img.className="unhide"
+        img.className="icon"
         img.src = data.forecast.icon;
         message1.textContent = `Location : ${data.location}`
         message2.textContent = `The Weather is ${data.forecast.descr} with ${data.forecast.temp} degrees and outside feels like ${data.forecast.feelsLike} degrees, it is ${data.forecast.isDay}`
