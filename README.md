@@ -7,10 +7,10 @@
 Run
 `npm install` or `npm i`
 
-### Starrting The Server
+### Starting The Server
 
 Run
-`npm run dev`
+`npm run dev` or visit `https://ikirere.herokuapp.com/`
 
 End Point
 
